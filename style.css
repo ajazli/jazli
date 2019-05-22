@@ -1,0 +1,909 @@
+@font-face {
+font-family: BebasNeue;
+src: url(BebasNeue.otf);
+}
+
+@font-face {
+font-family: Raleway;
+src: url(Raleway-Regular.ttf);
+}
+
+body {
+    background: #101010;
+	margin: 0;
+	font-family: BebasNeue;
+    overflow-x: hidden;
+}
+
+.dark{
+    color: white;    
+    background: #101010;
+}
+
+.dark .mode{    
+    filter: invert(100%);
+    background-image: url(images/sun-regular.svg);
+}
+
+.light .mode{  
+    filter: invert(100%);
+    background-image: url(images/moon-regular.svg);
+}
+.dark .mode::before{
+    
+    color: black;
+}
+
+.light{
+    
+    color: white;
+    background: #101010;
+    filter: invert(100%);
+}
+
+.light .mode::before{
+    color: black;
+}
+
+.light .logo img{
+    filter: invert(0%);
+}
+
+.light .bars img{
+    filter: invert(0%);
+}
+
+.light .landing img{
+    filter: invert(0%);
+}
+
+.light img{
+    filter: invert(100%);
+}
+
+.light .experience{
+    filter: invert(100%);
+}
+
+@media all and (max-width:1440px){
+    
+    .landing{
+        overflow: hidden;
+        position: fixed;
+        opacity: 1;
+        pointer-events: none;
+        height:100vh;
+        text-align: center;
+        margin: auto;
+        background-color: #101010;
+        width: 100vw;
+        line-height: 15vw;
+        z-index: 1001;
+        animation-name: landingAnim;
+        animation-duration: 1s;
+        animation-delay: 1.7s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .logoAnim{
+        color: black;
+        background-color: 
+        opacity: 0;
+        width: 30vw;
+        position: relative;
+        margin: auto;
+        filter: invert(100%);
+        animation-name: logoAnim;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    .logoAnim img{
+        margin-top: 45%;
+        width:10vw;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    header{
+        right:0;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.7);
+        top:0;
+        height: 7vw;
+        width: 100%;
+        letter-spacing: 0.01em;
+        display: block;
+        z-index: 1001;
+    }
+
+
+    header::after {
+        content: '';
+        display: block;
+        width: 33.33vw;
+        height: 10vw;
+        color: white;
+        clear: both;
+    }
+
+    .afterline {
+        content:'';
+        text-align: center;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 50vw;
+        height: 2px;
+        margin:0 auto;
+        background: grey;
+        transform: translate(0,-50%);
+        animation-name: midline;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-timing-function: ease-in-out;
+    }
+
+    .mission{
+        animation-name: mission;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-timing-function: ease-in-out;
+    }
+
+    .artist{
+        color: gray;
+        opacity: 0;
+        animation-name: artist;
+        animation-duration: 1s;
+        animation-delay: 3s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+
+    .logo img{
+        width: 1.5vw;
+    }
+
+    .logo {
+        left:0;
+        top:0;
+        position: absolute;
+        display: block;
+        margin-left: 3vw;
+        padding-top: 1.5vw;
+        line-height: 7vw;
+        filter: invert(100%);
+    }
+    
+    .bars{
+        filter: invert(100%);
+        display: none;
+        position: fixed;
+        z-index: 1111;
+    }
+    
+
+    .mode{
+        font-size: 1.5vw;
+        font-family: Raleway;
+        right:3vw;
+        width: 2.5vw;
+        height: 2.5vw;
+        top:2vw;
+        position: absolute;
+        display: inline-block;
+        margin:auto;
+        text-align: center;
+        line-height: 7vw;
+        cursor: pointer;
+    }
+    
+    nav {
+        position: relative;
+        text-align: center;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+
+    nav li {
+        display: inline-block;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        line-height: 7vw;
+        position: relative;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.5vw;
+        font-weight: 500;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    nav a::before {
+      content: '';
+      display: block;
+      height: 5px;
+      background-color: white;
+      position: absolute;
+      top: 0;
+      width: 0%;
+      transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+      width: 100%;
+    }
+
+    .main-text{
+        left:0;
+        right:0;
+        text-align: center;
+        position: absolute;
+        background: #101010;
+
+    }
+
+    .main{
+        background: #101010;
+        margin-top: 10vw;
+        height: 30vw;
+    }
+
+    .aboutContent{
+        color: white;
+        background: #0A0A0A;
+    }
+
+  
+    .profile{
+        width:40vw;
+        position: absolute;
+        margin-top: 2vw;
+        margin-left: 15vw;
+        text-align: left;
+    }
+
+    .profile h2{
+        font-size: 4em;
+        color: white;
+        text-align: left;
+        line-height: 1.5vw;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+    h4{
+        font-family: Raleway;
+        font-size: 1vw;
+        line-height: 1v.5w;
+        padding-left: 5px;
+    }
+
+    .aboutContent h3{
+        width:30vw;
+        position: relative;
+        margin-top: 7vw;
+        margin-left: 55vw;
+    }
+
+      .whatidoContent{
+        color: white;
+        background: #0A0A0A;
+        height: 100%;
+    }
+
+    
+    .whatidoContent h3{
+        width:70vw;
+    }
+
+    .whatidoContent h3 b{
+        font-weight: 900;
+    }
+
+    .workGrid{
+        padding-top: 3vw;
+        width: 80vw;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows:minmax(100px,auto);
+    }
+
+    .workGrid img{
+        width: 25vw;
+        padding-bottom: 1.5vw;
+    }
+
+    .profile img{
+        width: 25vw;
+        padding-bottom: 1vw;
+    }
+
+    section{
+        height: 50vw;
+        padding-top: 7vw;
+        padding-bottom: 5vw;
+        text-align: center;
+        width: 100vw;
+        position: relative;
+        display: block;
+        margin: auto;
+    }
+
+    h1{
+        color: white;
+        font-family: BebasNeue;
+        font-weight: 50;
+        font-size: 7vw;
+        margin: auto;
+        text-align: center;
+    }
+
+    h2{
+        color: grey;
+        margin: auto;
+        font-family: BebasNeue;
+        font-weight: 50;
+        margin-top: 1vw;
+        font-size: 5em;
+        text-align: center;
+    }
+
+    h3{
+
+        margin: auto;
+        font-family: Raleway;
+        font-weight: 50;
+        font-size: 1.5vw;
+        text-align: center;
+        position: relative;
+    }
+
+    .philosophyContent{
+        height: 40vw;
+        background: #101010;
+    }
+
+
+    .aesthetics{
+        color: black;
+        position: absolute;
+        background: white;
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        opacity: 0;
+        margin-top: 3vw;
+        line-height: 20vw;
+    }
+
+    .functionality{
+        color: white;
+        position: absolute;
+        background: white;
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        margin-top: 3vw;
+        opacity: 0;
+        line-height: 20vw;
+    }
+
+    .experience .innercircle{
+        background: #151515;
+    }
+
+    .experience{
+        color: white;
+        position: absolute;
+        background: red;
+        width: 20vw;
+        height: 20vw;
+        margin-top: 3vw;
+        margin-left: 40vw;
+        border-radius: 50%;
+        opacity: 0;
+        text-align: center;
+        line-height: 20vw;
+    }
+
+
+
+
+    .philosophyDesc{
+        width: 20vw;
+        position: absolute;
+        display: inline-block;
+        color: white;
+        margin: auto;
+        padding-top: 10vw;
+        opacity: 0;
+
+    }
+
+    .innercircle{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        margin: auto;
+        border-radius: 50%;
+        background-color: #000;
+        box-sizing: border-box;
+    }
+
+    .contactContent{
+        background-color: #101010;
+        color: white;
+        height: 100%;
+    }
+
+    .follow{
+        padding-top: 10px;
+        letter-spacing: .5em;
+    }
+
+    .social ul{
+        width: 8vw;
+        list-style-type: none;
+        text-align: center;
+        display: inline-block;
+        margin: auto;
+        padding: 0;
+    }
+
+    .social li{
+        display: inline-block;
+
+    }
+
+    .social li a{
+        width: 3vw;
+        height: 3vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 12px;
+        display: inline-block;
+        position: relative;
+       background-position: center;
+
+        }
+
+    .fb{
+        background-image: url(images/facebook.png);
+
+    }
+    
+
+    .fb:hover{
+        background-image: url(images/facebook_h.png);
+
+    }
+
+    .ig{
+        background-image: url(images/insta.png);
+
+    }
+
+    .ig:hover{
+        background-image: url(images/insta_h.png);
+
+    }
+    
+        
+@keyframes landingAnim{
+    0%{opacity: 1; visibility: visible;}
+    80%{opacity: 1; visibility: visible;}
+    100%{opacity: 0; visibility: hidden;}
+}
+
+@keyframes logoAnim {
+  0%,3%,5%,42%,44%,59%,61%,79%,81%,100% {opacity: 1; transform: scaleY(1);}
+  4.3% {opacity: 1; transform: scaleY(3);}
+  43% {opacity: 1; transform: scaleX(10); transform: scaleY(20);}
+    60% {opacity: 1; transform: scaleX(69); transform: scaleY(.5);}
+    80% {opacity: 1; transform: scaleX(123); transform: scaleY(.1);}
+}
+    
+    .js-aes-anim{
+    opacity: 1;
+    animation-name: aes;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+
+.js-funct-anim{
+    opacity: 1;
+    animation-name: funct;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+
+.js-exp-anim{
+    animation-name: exp;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.js-pd-anim{
+    animation-name: philosophyD;
+    animation-duration: 1s;
+    animation-delay: 4.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+    
+    @keyframes midline{
+    0%{width: 0vw;}
+    50%{width: 0vw;}
+    100%{width: 50vw;}
+}
+
+@keyframes mission{
+    0%{opacity: 0;}
+    5%{opacity: 1;}
+    10%{opacity: 0;}
+    20%{opacity: 1;}
+    25%{opacity: 0;}
+    30%{opacity: 1;}
+    35%{opacity: 0;}
+    40%{opacity: 1;}
+    45%{opacity: 0;}
+    47%{opacity: 1;}
+    50%{opacity: 1;}
+    55%{opacity: 0;}
+    60%{opacity: 1;}
+    65%{opacity: 0;}
+    77%{opacity: 1;}
+    75%{opacity: 0;}
+    85%{opacity: 1;}
+    87%{opacity: 0;}
+    90%{opacity: 1;}
+    95%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes artist{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes aes{
+    0%{margin-left: 20vw; opacity:0;}
+    30%{margin-left: 20vw; opacity:1;}
+    70%{margin-left: 40vw; opacity:.5;}
+    100%{margin-left: 40vw; opacity:0;}
+}
+
+@keyframes funct{
+    0%{margin-left: 60vw; opacity:0;}
+    30%{margin-left: 60vw; opacity:1;}
+    70%{margin-left: 40vw; opacity:.5;}
+    100%{margin-left: 40vw; opacity:0;}
+}
+
+@keyframes exp{
+    0%{opacity: 0}
+    50%{opacity: 1}
+    55%{opacity: 1; margin-left: 40vw;}
+    100%{opacity: 1; margin-left:25vw;}
+}
+
+@keyframes philosophyD{
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+}
+@media all and (max-width:1024px){
+    .landing{
+        line-height: 25vw;
+        
+    }
+    .logoAnim{
+        font-size: 10vw;
+    }
+}
+    
+@media all and (max-width:768px){
+    h1{
+        font-size: 12vw;
+    }
+    h3{
+        font-size:2.87vw;
+    }
+    
+    
+    .landing{
+        line-height: 45vw;
+        width:100vw;
+        position: absolute
+        vertical-align: middle;
+    }
+    .logoAnim{
+        font-size: 20vw;
+        text-align: center;
+        background-position: center;
+        margin: auto;
+    }
+    
+    .logoAnim img{
+        margin-top: 100%;
+        width: 30vw;
+    }
+
+    .bars{
+        font-size: 1.5vw;
+        font-family: Raleway;
+        left:3vw;
+        width: 3vw;
+        height: 3vw;
+        top:1.5vw;
+        position: absolute;
+        display: inline-block;
+        margin:auto;
+        text-align: center;
+        line-height: 7vw;
+        cursor: pointer;
+        z-index: 1111;
+        
+    }
+    
+    .logo img{
+        width: 2vw;
+        top:0px;
+    }
+
+    .logo {
+        left:0;
+        top:0;
+        position: absolute;
+        display: block;
+        margin-left: 50vw;
+        padding-top: 1vw;
+        line-height: 3vw;
+        filter: invert(100%);
+    }
+
+    
+    nav {
+        display: block;
+        opacity:0;
+        position: relative;
+        text-align: left;
+        top:-3vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,.9);
+    }
+
+    @keyframes navAnim{
+        0%{opacity: 0; visibility:hidden;}
+        100%{opacity: 1; visibility:visible;}
+    }
+    
+    @keyframes navoAnim{
+        0%{opacity: 1; visibility: visible;}
+        100%{opacity: 0; visibility: hidden;}
+    }
+    
+    .js-nav-in-anim{
+        opacity: 0;
+        animation-name: navAnim;
+        animation-duration: .5s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+    }
+    .js-nav-out-anim{
+        opacity: 1;
+        animation-name: navoAnim;
+        animation-duration: .5s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+    }
+    
+    nav ul {
+        padding-top: 7vw;
+        margin:auto;
+        list-style: none;
+        
+    }
+
+
+    nav li {
+        display: block;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        line-height:20vw;
+        position: relative;
+        text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 17vw;
+        font-weight: 500;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    nav a::before {
+        display: none;
+    }
+    
+    nav a::after {
+      content: '';
+      display: block;
+      height: 5px;
+      background-color: white;
+      position: relative;
+      top: 0;
+      width: 0%;
+      transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    .main{
+        background: #101010;
+        margin-top: 50vw;
+        height: 70vw;
+    }
+    
+     .aboutContent{
+        color: white;
+        background: #0A0A0A;
+         height: 100%;
+    }
+    
+    .aboutContent h3{
+        width:65vw;
+        font-size:2.87vw;
+        margin: auto;
+        vertical-align: middle;
+        position: relative;
+        display: block;
+        text-align: left;
+    }
+  
+    .profile{
+        width:65vw;
+        position: relative;
+        display: block;
+        margin: auto;
+        text-align: left;
+    }
+    
+    .profile img{
+        width: 65vw;
+        margin: auto;
+        display: block;
+        vertical-align: middle;
+        position: relative;
+        text-align: center;
+    }
+
+    .profile h2{
+        width: 65vw;
+        font-size: 10vw;
+        color: white;
+        text-align: left;
+        line-height: 1.5vw;
+        padding-top: 5vw;
+        margin: auto;
+        vertical-align: middle;
+        position: relative;
+        display: block;
+    }
+
+    h4{
+        width: 65vw;
+        font-family: Raleway;
+        line-height: 3vw;
+        font-size: 2.14vw;
+        padding-top: 0px;
+        margin: auto;
+        vertical-align: middle;
+        position: relative;
+        display: block;
+    }
+    .philosophyContent{
+        color: white;
+        background: #101010;
+         height: 70vw;
+    }
+    
+    .aesthetics{
+        width: 25vw;
+        height: 25vw;
+        border-radius: 50%;
+        opacity: 0;
+        margin-top: 10vw;
+        line-height: 25vw;
+    }
+
+    .functionality{
+        color: white;
+        position: absolute;
+        background: white;
+        width: 25vw;
+        height: 25vw;
+        border-radius: 50%;
+        margin-top: 10vw;
+        opacity: 0;
+        line-height: 25vw;
+    }
+
+    .experience .innercircle{
+        background: #151515;
+    }
+
+    .experience{
+        color: white;
+        position: absolute;
+        background: red;
+        width: 25vw;
+        height: 25vw;
+        margin-top: 10vw;
+        margin-left: 40vw;
+        border-radius: 50%;
+        opacity: 0;
+        text-align: center;
+        line-height: 25vw;
+    }
+
+
+    @keyframes exp{
+        0%{opacity: 0}
+        50%{opacity: 1}
+        55%{opacity: 1; margin-left: 40vw;}
+        100%{opacity: 1; margin-left:15vw;}
+    }
+
+    .philosophyDesc{
+        width: 35vw;
+        position: absolute;
+        display: inline-block;
+        color: white;
+        margin: auto;
+        padding-top: 14vw;
+        opacity: 0;
+
+    }
+    
+}

@@ -1,0 +1,327 @@
+@font-face {
+font-family: BebasNeue;
+src: url(BebasNeue.otf);
+}
+
+@font-face {
+font-family: Raleway;
+src: url(RalewayRegular.ttf);
+}
+
+body {
+	margin: 0;
+	background: #101010;
+	font-family: BebasNeue;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header{
+    right:0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top:0;
+    height: 7vw;
+    width: 100%;
+    letter-spacing: 0.01em;
+    display: block;
+    z-index: 1001;
+}
+
+
+header::after {
+    content: '';
+    display: block;
+    width: 33.33vw;
+    height: 10vw;
+    color: white;
+    clear: both;
+}
+
+.afterline {
+    content:'';
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 50vw;
+    height: 2px;
+    margin:0 auto;
+    background: grey;
+    transform: translate(0,-50%);
+    animation-name: midline;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.mission{
+    transform: translate(0,-50%);
+    animation-name: mission;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes midline{
+    0%{width: 0vw;}
+    50%{width: 0vw;}
+    100%{width: 50vw;}
+}
+
+@keyframes mission{
+    0%{opacity: 0;}
+    5%{opacity: 1;}
+    10%{opacity: 0;}
+    20%{opacity: 1;}
+    25%{opacity: 0;}
+    30%{opacity: 1;}
+    35%{opacity: 0;}
+    40%{opacity: 1;}
+    45%{opacity: 0;}
+    47%{opacity: 1;}
+    50%{opacity: 1;}
+    55%{opacity: 0;}
+    60%{opacity: 1;}
+    65%{opacity: 0;}
+    77%{opacity: 1;}
+    75%{opacity: 0;}
+    85%{opacity: 1;}
+    87%{opacity: 0;}
+    90%{opacity: 1;}
+    95%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.logo {
+    left:0;
+    top:0;
+    position: absolute;
+    display: block;
+    margin-left: 3vw;
+    padding-top: 1.5vw;
+    filter: invert(100%);
+}
+
+nav {
+    position: relative;
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+nav li {
+    display: inline-block;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding-top: 2.5vw;
+    position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+.main-text{
+    left:0;
+    right:0;
+    text-align: center;
+    position: absolute;
+    
+}
+
+.main{
+    margin-top: 5vw;
+}
+
+.aboutContent{
+    color: white;
+    background: #0A0A0A;
+}
+
+.whatidoContent{
+    color: white;
+    background: #0A0A0A;
+}
+
+.profile{
+    width:30vw;
+    position: relative;
+    margin-top: 5vw;
+}
+
+.aboutContent h3{
+    width:30vw;
+    position: relative;
+    margin-top: 5vw;
+    margin-left: 50vw;
+}
+
+section{
+    height: 40vw;
+    padding-top: 10vw;
+    text-align: center;
+    width: 100vw;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+h1{
+    color: white;
+    font-family: BebasNeue;
+    font-weight: 50;
+    font-size: 7vw;
+    margin: auto;
+    text-align: center;
+}
+
+h2{
+    color: grey;
+    margin: auto;
+    font-family: BebasNeue;
+    font-weight: 50;
+    margin-top: 1vw;
+    font-size: 5vw;
+    text-align: center;
+}
+
+h3{
+    
+    margin: auto;
+    font-family: Raleway;
+    font-weight: 50;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+}
+
+
+.aesthetics{
+    color: black;
+    position: absolute;
+    background: white;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    opacity: 0;
+    margin-top: 3vw;
+    line-height: 20vw;
+}
+
+.functionality{
+    color: white;
+    position: absolute;
+    background: white;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    margin-top: 3vw;
+    opacity: 0;
+    line-height: 20vw;
+}
+
+.experience{
+    color: white;
+    position: absolute;
+    background: red;
+    width: 20vw;
+    height: 20vw;
+    margin-top: 3vw;
+    margin-left: 40vw;
+    border-radius: 50%;
+    opacity: 0;
+    text-align: center;
+    line-height: 20vw;
+}
+
+@keyframes aes{
+    0%{margin-left: 20vw; opacity:0;}
+    30%{margin-left: 20vw; opacity:1;}
+    70%{margin-left: 40vw; opacity:.5;}
+    100%{margin-left: 40vw; opacity:0;}
+}
+
+@keyframes funct{
+    0%{margin-left: 60vw; opacity:0;}
+    30%{margin-left: 60vw; opacity:1;}
+    70%{margin-left: 40vw; opacity:.5;}
+    100%{margin-left: 40vw; opacity:0;}
+}
+
+@keyframes exp{
+    0%{opacity: 0}
+    100%{opacity: 100}
+}
+
+
+.js-aes-anim{
+    opacity: 1;
+    animation-name: aes;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+
+.js-funct-anim{
+    opacity: 1;
+    animation-name: funct;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+
+.js-exp-anim{
+    animation-name: exp;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.innercircle{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    margin: auto;
+    border-radius: 50%;
+    background-color: #000;
+    box-sizing: border-box;
+}
