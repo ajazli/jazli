@@ -922,3 +922,76 @@ body {
     }
     
 }
+
+@media all and (max-width:320px){
+    header{
+        height: 13vw;
+    }
+    h1{
+        font-size: 13vw;
+    }
+    h3{
+        font-size:2.87vw;
+    }
+     .light .mode{
+        height: 7vw;
+        width: 7vw;
+    }
+    
+    .dark .mode{
+        height: 7vw;
+        width: 7vw;
+    }
+    
+    .landing{
+        line-height: 45vw;
+        width:100vw;
+        position: absolute
+        vertical-align: middle;
+    }
+    .logoAnim{
+        font-size: 20vw;
+        text-align: center;
+        background-position: center;
+        margin: auto;
+    }
+    
+    .logoAnim img{
+        margin-top: 100%;
+        width: 30vw;
+    }
+
+    .bars{
+        font-size: 1.5vw;
+        font-family: Raleway;
+        left:3vw;
+        width: 7vw;
+        height: 7vw;
+        top:1.5vw;
+        position: absolute;
+        display: inline-block;
+        margin:auto;
+        text-align: center;
+        line-height: 7vw;
+        cursor: pointer;
+        z-index: 1111;
+        
+    }
+    
+    .logo img{
+        width: 4vw;
+        top:0px;
+    }
+
+    .logo {
+        left:0;
+        top:0;
+        position: absolute;
+        display: block;
+        margin-left: 50vw;
+        padding-top: 1vw;
+        line-height: 4vw;
+        filter: invert(100%);
+    }
+}
+
