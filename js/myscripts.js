@@ -152,3 +152,5 @@ $(document).ready(function() {
  });
 
 
+
+setTimeout(function(){document.body.style.overflowY='visible'}, 3000);

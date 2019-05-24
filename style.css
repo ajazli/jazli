@@ -12,6 +12,7 @@ body {
     background: #101010;
 	margin: 0;
 	font-family: BebasNeue;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -71,6 +72,7 @@ body {
         overflow: hidden;
         position: fixed;
         opacity: 1;
+        visibility: visible;
         pointer-events: none;
         height:100vh;
         text-align: center;
